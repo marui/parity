@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">parity</string>
+    <string-array name="array_name">
+        <item>Today</item>
+        <item>Yesterday</item>
+        <item>Last Week</item>
+        <item>Long Time Ago</item>
+    </string-array>
 </resources>
