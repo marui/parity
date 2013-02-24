@@ -1,18 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
-
+<RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Cooking"
-            android:id="@+id/button_cooking" android:layout_gravity="left|center_vertical"/>
+            android:id="@+id/button_cooking" android:layout_alignParentLeft="true" android:layout_alignParentTop="true"
+            android:text="Cooking"/>
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Dishes"
-            android:id="@+id/button_dishes" android:layout_gravity="left|center_vertical"/>
-</LinearLayout>
+            android:id="@+id/button_dishes" android:layout_alignLeft="@+id/button_cooking" android:layout_alignParentTop="true"
+            android:layout_marginTop="50dp" android:layout_alignRight="@+id/button_cooking"/>
+    <TextView
+            android:layout_width="59dp"
+            android:layout_height="wrap_content"
+            android:text="4"
+            android:id="@+id/textView_cooking"
+            android:layout_centerHorizontal="true" android:layout_alignTop="@+id/button_cooking"
+            android:layout_alignBottom="@+id/button_cooking"/>
+    <TextView
+            android:layout_width="57dp"
+            android:layout_height="30dp"
+            android:text="3"
+            android:id="@+id/textView_dishes" android:layout_centerHorizontal="true"
+            android:layout_below="@+id/button_cooking" android:layout_alignRight="@+id/textView_cooking"
+            android:layout_alignBottom="@+id/button_dishes"/>
+</RelativeLayout>

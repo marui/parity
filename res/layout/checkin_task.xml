@@ -4,33 +4,73 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
     <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="New Text"
-            android:id="@+id/textView_task_title" android:layout_alignParentLeft="true" android:layout_alignParentTop="true"/>
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="87dp"
+            android:layout_height="31dp"
             android:text="Time"
-            android:id="@+id/textView_time" android:layout_alignLeft="@+id/textView_task_title"
-            android:layout_below="@+id/textView_task_title"/>
+            android:id="@+id/textView_time"
+            android:layout_alignParentLeft="true" android:layout_alignTop="@+id/spinner_time"/>
     <Button
-            android:layout_width="wrap_content"
+            android:layout_width="122dp"
             android:layout_height="wrap_content"
             android:text="Cancel"
-            android:id="@+id/button_cancel" android:layout_alignLeft="@+id/textView_task_title"
-            android:layout_alignParentBottom="true" android:layout_alignRight="@+id/spinner_time"/>
+            android:id="@+id/button_cancel"
+            android:layout_alignParentLeft="true" android:layout_marginLeft="12dp"
+            android:layout_alignParentBottom="true" android:layout_toLeftOf="@+id/spinner_time"/>
     <Button
-            android:layout_width="59dp"
+            android:layout_width="99dp"
             android:layout_height="wrap_content"
             android:text="Confirm"
-            android:id="@+id/button_confirm" android:layout_alignParentRight="true"
-            android:layout_alignTop="@+id/button_cancel" android:layout_alignParentLeft="true"
-            android:layout_marginLeft="181dp"/>
+            android:id="@+id/button_confirm"
+            android:layout_toRightOf="@+id/spinner_time" android:layout_alignTop="@+id/button_cancel"/>
     <Spinner
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/spinner_time" android:layout_toRightOf="@+id/textView_task_title"
-            android:layout_below="@+id/textView_task_title" android:spinnerMode="dropdown"
-            android:entries="@array/array_name"/>
+            android:id="@+id/spinner_time"
+            android:spinnerMode="dropdown"
+            android:entries="@array/array_name"
+            android:layout_centerHorizontal="true" android:layout_alignParentTop="true"
+            android:layout_marginTop="36dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:text="New Text"
+            android:id="@+id/textView_task_title" android:layout_alignLeft="@+id/textView_time"
+            android:layout_alignParentTop="true" android:layout_alignRight="@+id/button_confirm"/>
+    <TextView
+            android:layout_width="71dp"
+            android:layout_height="29dp"
+            android:text="Point"
+            android:id="@+id/textView_point"
+            android:layout_alignLeft="@+id/textView_time" android:layout_alignParentTop="true"
+            android:layout_marginTop="118dp"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:id="@+id/button_plus"
+            android:layout_toLeftOf="@+id/button_minus" android:layout_alignTop="@+id/textView_point"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:id="@+id/button_minus"
+            android:layout_toLeftOf="@+id/button_confirm" android:layout_alignTop="@+id/textView_point"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_task_point_actual" android:layout_toRightOf="@+id/button_cancel"
+            android:layout_alignTop="@+id/textView_point" android:layout_toLeftOf="@+id/button_plus"
+            android:layout_alignBottom="@+id/button_plus"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Comment"
+            android:id="@+id/textView_comment"
+            android:layout_alignLeft="@+id/textView_time" android:layout_alignParentTop="true"
+            android:layout_marginTop="210dp"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText_comment" android:layout_toRightOf="@+id/button_cancel"
+            android:layout_alignTop="@+id/textView_comment"/>
 </RelativeLayout>

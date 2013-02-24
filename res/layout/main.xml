@@ -1,17 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout
-        android:orientation="vertical"
+<RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
     <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="29dp"
             android:text="New Text"
-            android:id="@+id/textView_confirm_message" android:layout_gravity="center_horizontal|top"/>
+            android:id="@+id/textView_confirm_message" android:layout_alignLeft="@+id/checkin"
+            android:layout_alignParentTop="true" android:layout_alignRight="@+id/checkin"/>
     <Button
-            android:layout_width="fill_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Check In"
-            android:id="@+id/checkin" android:layout_gravity="center_horizontal|bottom"/>
-</LinearLayout>
+            android:id="@+id/checkin"
+            android:layout_centerHorizontal="true" android:layout_alignParentTop="true"
+            android:layout_marginTop="224dp" android:layout_alignParentRight="true"
+            android:layout_alignParentLeft="true"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="New Text"
+            android:id="@+id/textView_task_point" android:layout_alignLeft="@+id/textView_confirm_message"
+            android:layout_below="@+id/textView_confirm_message"
+            android:layout_alignRight="@+id/textView_confirm_message"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="29dp"
+            android:text="New Text"
+            android:id="@+id/textView_comment" android:layout_alignLeft="@+id/textView_confirm_message"
+            android:layout_below="@+id/textView_task_point" android:layout_alignRight="@+id/textView_confirm_message"/>
+</RelativeLayout>
